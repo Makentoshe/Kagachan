@@ -1,3 +1,3 @@
 package com.makentoshe.common
 
-expect fun getPlatformName(): Stringasdsdfsdf
+expect fun getPlatformName(): String
