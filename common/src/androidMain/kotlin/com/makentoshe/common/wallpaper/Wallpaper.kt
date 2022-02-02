@@ -9,3 +9,4 @@ actual interface Wallpaper<T : Any> {
 data class AndroidWallpaper(val bitmap: Bitmap) : Wallpaper<Bitmap> {
     override fun get() = bitmap
 }
+
