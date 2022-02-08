@@ -13,7 +13,12 @@ import java.io.File
 //}
 
 fun main() {
-    val file = File("C:\\Users\\Maxim_Khvostov\\Pictures\\test.jpg")
-    println("Exists File($file): ${file.exists()}")
-    DesktopWallpaperSetter().setup(DesktopWallpaper(file))
+    val file = File("C:\\Users\\Maxim_Khvostov\\Desktop\\kicad-6.0.1-x86_64.exe")
+    val result = DesktopWallpaperSetter().setup(DesktopWallpaper(file))
+
+    result.fold({
+        println("success")
+    }, {
+        println(it)
+    })
 }
