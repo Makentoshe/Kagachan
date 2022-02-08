@@ -5,7 +5,9 @@ import com.sun.jna.Native
 import com.sun.jna.win32.W32APIOptions
 
 interface WindowsUser32 : Library {
-    fun SystemParametersInfo(uiAction: Int, uiParam: Int, pvParam: String?, fWinIni: Int): Boolean
+
+    @Suppress("FunctionName")
+    fun SystemParametersInfo(uiAction: Int, uiParam: Int, pvParam: String, fWinIni: Int): Boolean
 
     companion object {
         val INSTANCE = Native.loadLibrary("user32", WindowsUser32::class.java, W32APIOptions.DEFAULT_OPTIONS) as WindowsUser32

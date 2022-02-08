@@ -13,7 +13,7 @@ import java.io.File
 //}
 
 fun main() {
-    val file = File("C:\\Users\\Maxim_Khvostov\\Pictures\\asa.jpg")
+    val file = File("C:\\Users\\Maxim_Khvostov\\Pictures\\test.jpg")
     println("Exists File($file): ${file.exists()}")
-    DesktopWallpaperSetter().setup(DesktopWallpaper(File("")))
+    DesktopWallpaperSetter().setup(DesktopWallpaper(file))
 }
