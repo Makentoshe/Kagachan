@@ -23,6 +23,10 @@ kotlin {
                 api(compose.runtime)
                 api(compose.foundation)
                 api(compose.material)
+
+                // https://mvnrepository.com/artifact/net.java.dev.jna/jna
+                implementation("net.java.dev.jna:jna:5.9.0")
+                implementation("net.java.dev.jna:jna-platform:5.9.0")
             }
         }
         val commonTest by getting {
