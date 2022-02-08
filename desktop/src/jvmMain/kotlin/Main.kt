@@ -1,15 +1,19 @@
 package com.makentoshe.desktop
 
-import androidx.compose.desktop.DesktopMaterialTheme
-import androidx.compose.ui.window.Window
-import androidx.compose.ui.window.application
-import com.makentoshe.common.App
+import com.makentoshe.common.wallpaper.DesktopWallpaper
+import com.makentoshe.common.wallpaper.DesktopWallpaperSetter
+import java.io.File
 
+//fun main() = application {
+//    Window(onCloseRequest = ::exitApplication) {
+//        DesktopMaterialTheme {
+//            App()
+//        }
+//    }
+//}
 
-fun main() = application {
-    Window(onCloseRequest = ::exitApplication) {
-        DesktopMaterialTheme {
-            App()
-        }
-    }
+fun main() {
+    val file = File("C:\\Users\\Maxim_Khvostov\\Pictures\\asa.jpg")
+    println("Exists File($file): ${file.exists()}")
+    DesktopWallpaperSetter().setup(DesktopWallpaper(File("")))
 }
